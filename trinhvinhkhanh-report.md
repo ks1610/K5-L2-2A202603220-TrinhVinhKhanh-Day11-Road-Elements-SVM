@@ -1,8 +1,13 @@
 # Báo cáo cá nhân — Ngày 11
-Họ tên:               Mã học viên:  
-Phiên bản CVAT (Help → About):  
-Guideline: Road v1.0    Lần nộp (`revision` trong manifest):  
-Thời điểm export (ngày giờ trên CVAT):    Số lần nộp lại sau Rework:  
+Họ tên: Trịnh Vinh Khánh          
+Mã học viên: 2A2092603220
+
+Phiên bản CVAT (Help → About): 2.74.1
+
+Guideline: Road v1.0    
+Lần nộp (`revision` trong manifest): 2  
+Thời điểm export (ngày giờ trên CVAT): Nov 21st 26, 23:50    
+Số lần nộp lại sau Rework: 1 
 
 ## 1. Kiểm project
 | Mục | Đúng như guideline Road v1.0? | Ghi chú |
@@ -35,11 +40,10 @@ Cách đặt tag ảnh trên bản CVAT này:  | Dùng công cụ Tag ở thanh 
 Bạn kiểm lô của tôi:  Quyết định nhận được:  
 | Mã lỗi | Số lỗi | Đồng ý? | Đã sửa? |
 | --- | ---: | --- | --- |
+| QC1-03 | 4 | có | Đã sửa |
+
 
 ## 5. Kiểm file export
-| File | Mở lại được? | Số shape ảnh 1 (job / file) | Số shape ảnh 2 (job / file) | Tag camera có trong XML? |
-| --- | --- | --- | --- | --- |
-
 
 | File | Mở lại được? | Số shape ảnh 1 (job / file) | Số shape ảnh 2 (job / file) | Tag camera có trong XML? |
 |---|---|---|---|---|
@@ -47,14 +51,14 @@ Bạn kiểm lô của tôi:  Quyết định nhận được:
 | trinhvinhkhanh-fisheye.zip | Có | B01: job 8 / file 4 | B02: job 7 / file 3 | Có (camera, source, timeofday, weather) |
 ## 6. Ảnh chụp màn hình
 1. Tab Labels của project.
-![Tab Labels](docs/images/huong-dan-cvat/6-1image.png)
+![Tab Labels](submissions\images\6-1image.png)
 2. Một ảnh camera trước đã gán đủ (làn, vùng lái, đèn/biển).
-![Ảnh front gán đủ](docs/images/huong-dan-cvat/6-2image.png)
+![Ảnh front gán đủ](submissions/images/6-2image.png)
 3. Một ảnh fisheye đã gán, phóng to đoạn polyline cong.
-![Ảnh fisheye](docs/images/huong-dan-cvat/6-3image.png)
+![Ảnh fisheye](submissions/images/6-3image.png)
 
 4. Một đoạn XML có <polyline label="lane">.
-![Ảnh chứa <polyline label="lane">](docs/images/huong-dan-cvat/6-4image.png)
+![Ảnh chứa <polyline label="lane">](submissions/images/6-4image.png)
 
 ## 7. Tự đánh giá
 Lỗi bạn mắc nhiều nhất hôm nay (theo mã QC1-xx), và cách tránh ở Ngày 20:  
