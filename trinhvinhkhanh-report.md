@@ -26,6 +26,7 @@ Cách đặt tag ảnh trên bản CVAT này:  | Dùng công cụ Tag ở thanh 
 ## 3. Bảng ca khó
 | Ảnh | Nhãn | Phân vân giữa | Đã chọn | Lý do |
 | --- | --- | --- | --- | --- |
+| A05 | drivable | có nên phủ hết đường là drivable không | chọn drivable cho toàn bộ đường |  |
 
 ## 4. Phiếu QC 1 nhận được
 Bạn kiểm lô của tôi:  Quyết định nhận được:  
