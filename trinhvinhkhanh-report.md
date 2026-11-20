@@ -26,7 +26,10 @@ Cách đặt tag ảnh trên bản CVAT này:  | Dùng công cụ Tag ở thanh 
 ## 3. Bảng ca khó
 | Ảnh | Nhãn | Phân vân giữa | Đã chọn | Lý do |
 | --- | --- | --- | --- | --- |
-| A05 | drivable | có nên phủ hết đường là drivable không | chọn drivable cho toàn bộ đường |  |
+| A05 | drivable | có nên polygon toàn bộ đường là drivable không? | chọn drivable cho toàn bộ đường | không có vạch phân làn nên vùng đuòng vẫn thuộc vùng có thể đi của phương tiện |
+| A06 | drivable | có nên polygon làn đường bên phải là drivable không? | chọn drivable | Đối chiếu với làn đối diện khi xe vẫn đi cùng chiều nên khu vực đó drivable. |
+| A09 | lane | có nên gán cho dải phân cách cong ở làn bên cạnh không? | không gán | Ảnh có xe đi ngược chiều trong làn và không đủ căn cứ để xác định đó là làn xe đi được |
+
 
 ## 4. Phiếu QC 1 nhận được
 Bạn kiểm lô của tôi:  Quyết định nhận được:  
@@ -37,11 +40,21 @@ Bạn kiểm lô của tôi:  Quyết định nhận được:
 | File | Mở lại được? | Số shape ảnh 1 (job / file) | Số shape ảnh 2 (job / file) | Tag camera có trong XML? |
 | --- | --- | --- | --- | --- |
 
+
+| File | Mở lại được? | Số shape ảnh 1 (job / file) | Số shape ảnh 2 (job / file) | Tag camera có trong XML? |
+|---|---|---|---|---|
+| trinhvinhkhanh-front.zip | Có | A01: job 14 / file 10 | A02: job 11 / file 7 | Có (camera, source, timeofday, weather) |
+| trinhvinhkhanh-fisheye.zip | Có | B01: job 8 / file 4 | B02: job 7 / file 3 | Có (camera, source, timeofday, weather) |
 ## 6. Ảnh chụp màn hình
 1. Tab Labels của project.
+![Tab Labels](docs/images/huong-dan-cvat/6-1image.png)
 2. Một ảnh camera trước đã gán đủ (làn, vùng lái, đèn/biển).
+![Ảnh front gán đủ](docs/images/huong-dan-cvat/6-2image.png)
 3. Một ảnh fisheye đã gán, phóng to đoạn polyline cong.
+![Ảnh fisheye](docs/images/huong-dan-cvat/6-3image.png)
+
 4. Một đoạn XML có <polyline label="lane">.
+![Ảnh chứa <polyline label="lane">](docs/images/huong-dan-cvat/6-4image.png)
 
 ## 7. Tự đánh giá
 Lỗi bạn mắc nhiều nhất hôm nay (theo mã QC1-xx), và cách tránh ở Ngày 20:  
@@ -54,6 +67,11 @@ Lỗi mắc nhiều nhất là chọn nhầm là
 Cách Phòng tránh:
 - Kiểm tra, đối chiếu vị trí trái/phải từ góc nhìn.
 - Thêm edge_zone cho tâm box trong 80 % bán kính
+
+Nhãn đi vào model qua chuỗi: 
+Nhãn gán trên CVAT rồi export `annotations.xml`, người nhận chuyển sang định dạng huấn luyện, sau đó nhãn được dùng để tính loss khi train. 
+
+Trong ảnh A01, lúc gán vạch bên phải xe là L1 thay vì R1. Nếu để nguyên, model sẽ học rằng vạch bên phải là vạch bên trái, nên khi suy luận trên cảnh tương tự, nó có thể xác định sai phía làn và đưa ra quyết định lái lệch về hướng ngược lại. Sau khi sửa thành R1, nhãn khớp với thực tế và model học đúng quan hệ vị trí giữa xe và hai vạch.
 ```
 ## 8. (Tùy chọn, buffer) Từ polyline đến đích row-anchor
 | y | 720 | 680 | 640 | 600 | 560 |
