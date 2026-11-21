@@ -1,7 +1,7 @@
 # Phiếu QC 1 — Road v1.0
 
-Lô được kiểm (học viên):  Trần Ngọc Quân       
-Người kiểm (học viên):  Trịnh Vinh Khánh
+Lô được kiểm (học viên):  Trần Ngọc Quân (2A202603250)   
+Người kiểm (học viên):  Trịnh Vinh Khánh (2A202603220)
 Ngày: 21/11/2026                         
 Phiên bản guideline: Road v1.0  
 File được kiểm (tên + `revision` trong manifest):   nguyenngocquan-front.zip, nguyenngocquan-fisheye.zip — revision 2 (sha256 khớp manifest)
