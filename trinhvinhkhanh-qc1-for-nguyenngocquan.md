@@ -4,8 +4,7 @@ Lô được kiểm (học viên):  Trần Ngọc Quân (2A202603250)
 Người kiểm (học viên):  Trịnh Vinh Khánh (2A202603220)
 Ngày: 21/11/2026                         
 Phiên bản guideline: Road v1.0  
-File được kiểm (tên + `revision` trong manifest):   nguyenngocquan-front.zip, nguyenngocquan-fisheye.zip — revision 2 (sha256 khớp manifest)
-
+File được kiểm (tên + `revision` trong manifest):   nguyenngocquan-front.zip, nguyenngocquan-fisheye.zip — revision 2 (sha256 khớp manifest)<br>
 Số ảnh kiểm: 6 (A04, A06, A08, A09, A13, B03 + 0 ảnh thêm, ghi riêng)   Số nhãn đã kiểm (shape + tag): 89 (65 shape + 24 tag)
 
 ## Tổng hợp theo mã
@@ -39,7 +38,6 @@ Số ảnh kiểm: 6 (A04, A06, A08, A09, A13, B03 + 0 ảnh thêm, ghi riêng) 
 
 ## Quyết định
 Lỗi nặng: 1   Lỗi chính: 2 / 89 nhãn = 2,25 %   Lỗi nhẹ: 0   Ca chờ lead: 1  
-Quyết định (Release / Hold / Rework):  Rework
-Lý do (theo luật của phiếu): Theo Luật quyết định: Có ít nhất một lỗi nặng → **Rework**.
-
+Quyết định (Release / Hold / Rework):  **Rework** <br>
+Lý do (theo luật của phiếu): Theo Luật quyết định: Có ít nhất một lỗi nặng → **Rework**.<br>
 Loại lỗi: bỏ sót = thiếu nhãn phải có; thừa = gán cái không phải đối tượng; sai phạm vi = hình lệch, sai chiều, dừng sai chỗ, tràn vùng. Ba loại này theo cách chia lỗi gán nhãn của ISO/IEC 5259-4 (mục 8.4.2); "sai thuộc tính" và "lỗi file" là khóa học thêm. Cách xếp mức: [thang mức lỗi](../docs/qc_severity_road_v1.0.md).
